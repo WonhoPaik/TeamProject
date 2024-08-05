@@ -1,0 +1,35 @@
+/* ChecklistModal.css */
+
+.checklist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.add-item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-item input {
+  flex: 1;
+  margin-right: 10px;
+}

@@ -1,0 +1,10 @@
+.Footer {
+ text-align: center;
+  padding: 20px 3px;
+  border-bottom: 1px dotted #163312;
+  border-top: 1px dotted #163312;
+}
+
+.Footer_title {
+  font-size: 25px;
+}
