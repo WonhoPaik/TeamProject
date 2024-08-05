@@ -1,0 +1,220 @@
+div.HotelInfo {
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 52px;
+}
+
+div.HotelInfo  hr {
+    height: 10px;
+    background-color: #ffffff;
+    border: none;
+}
+
+div.HotelInfo > div.nav_bar {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    padding: 9px 12px;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+div.HotelInfo > div.nav_bar > button {
+    background-size: cover;
+    height: 34px;
+    width: 34px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+div.HotelInfo > div.nav_bar > button.fallbackBtn {
+    background-image: url("/src/assets/images/btn-com-back@4x.png");
+}
+
+div.HotelInfo > div.infoTop > div.hotelImg {
+    width: 100%;
+    min-height: 210px;
+}
+
+div.HotelInfo > div.infoTop > div.hotelImg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+div.HotelInfo > div.infoTop > div.infoText {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+div.HotelInfo > div.infoTop > div.infoText > .tag {
+    color: #8c8c8c;
+}
+
+div.HotelInfo > div.infoTop > div.infoText > .name {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button {
+    width: 25%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button::before {
+    content: "";
+    display: block;
+    height: 30px;
+    background-size: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button.saveBtn::before {
+    background-image: url("/src/assets/images/btn-end-save-off@4x.png");
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button.scheduleBtn::before {
+    background-image: url("/src/assets/images/btn-end-schedule@4x.png");
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button.reviewBtn::before {
+    background-image: url("/src/assets/images/btn-end-review@4x.png");
+}
+
+div.HotelInfo > div.infoTop > div.buttonSection > button.shareBtn::before {
+    background-image: url("/src/assets/images/btn-com-share@3x.png");
+}
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader {
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap:  15px;
+}
+
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader > .title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader > .bookingOption {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader > .bookingOption > button {
+    flex: 1;
+    padding: 15px 0;
+    font-size: 1em;
+}
+
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader > .priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.HotelInfo > div.bookingSection > .bookingSectionHeader > .priceSection > .price {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+div.HotelInfo > div.infoMiddle > div.description {
+    padding: 30px;
+    text-align: left;
+}
+
+div.HotelInfo > div.infoBottom {
+    padding: 0 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+div.HotelInfo > div.infoBottom > div.subTitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+div.HotelInfo > div.infoBottom > div.subText {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.HotelInfo > div.infoBottom > div.subText span {
+    font-weight: 600;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelPolicy {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelPolicy > div {
+    width: 50%;
+    padding: 10px 0;
+    color: black;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelPolicy > div.title {
+    background-color: #efefef;
+    font-weight: 600;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelPolicy > div.time {
+    background-color: #dddddd;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelMap {
+    width: 100%;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelMap {
+    position: relative;
+    width: 100%;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelMap.iframe16To9 {
+    padding-top: 56.25%;
+}
+
+div.HotelInfo > div.infoBottom > div.hotelMap > iframe {
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

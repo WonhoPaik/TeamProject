@@ -1,0 +1,64 @@
+.roomRegistrationForm {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.roomRegistrationForm h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.roomRegistrationForm .formGroup {
+    margin-bottom: 20px;
+}
+
+.roomRegistrationForm .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.roomRegistrationForm .formGroup input,
+.roomRegistrationForm .formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.roomRegistrationForm .formGroup input:focus,
+.roomRegistrationForm .formGroup textarea:focus {
+    outline: none;
+    border-color: #39b0ff;
+}
+
+.roomRegistrationForm .formGroup input[type="file"] {
+    padding: 5px;
+}
+
+.roomRegistrationForm .btnSection {
+    text-align: center;
+}
+
+.roomRegistrationForm .btnSection button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #39b0ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.roomRegistrationForm .btnSection button:hover {
+    background-color: #368fff;
+}

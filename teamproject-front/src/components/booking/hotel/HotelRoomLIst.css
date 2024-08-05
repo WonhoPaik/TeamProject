@@ -1,0 +1,101 @@
+div.HotelRoomLIst{
+    padding: 30px;
+    text-align: left;
+    border-bottom: 2px solid red;
+}
+div.HotelRoomLIst>div.infoHeader>div{
+    margin-bottom: 15px;
+}
+div.HotelRoomLIst>div.infoHeader>.title{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+div.HotelRoomLIst>div.infoHeader>.bookingOption{
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+div.HotelRoomLIst>div.infoHeader>.bookingOption>button{
+    flex: 1;
+    padding: 15px 0 ;
+    font-size: 1em;
+}
+div.HotelRoomLIst>div.infoHeader>.priceSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.HotelRoomLIst>div.infoHeader>.priceSection>.price{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomListHeader{
+    margin-bottom: 15px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomListHeader>.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomListHeader>.title>.text{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomListHeader>.selectOption{
+    display: flex;
+    gap: 6px;
+    width: 100%;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomListHeader>.selectOption>button{
+    padding: 5px 10px ;
+    font-size: 1em;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.roomSection{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.roomSection>div.roomInfo>.type{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.roomSection>.roomImg{
+    width: 80px;
+    height: 80px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.roomSection>.roomImg>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.priceSection{
+    padding: 10px;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.priceSection>.text{
+    font-size: 1em;
+    font-weight: 600;
+    color: #39b0ff;
+    margin-bottom: 8px;
+}
+
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.priceSection>.priceInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.priceSection>.priceInfo>.price{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+div.HotelRoomLIst>div.hotelRoomList>div.roomItem>div.priceSection>.priceInfo>button{
+    padding: 10px 20px ;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #39b0ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}

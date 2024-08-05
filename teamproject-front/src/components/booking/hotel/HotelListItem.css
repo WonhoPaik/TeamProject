@@ -1,0 +1,50 @@
+.hotelListItem {
+    cursor: pointer;
+}
+.hotelListItem:not(:last-child)::after{
+    content: "";
+    display: block;
+    overflow: hidden;
+    border-bottom: 10px solid rgb(239, 239, 239);
+    margin: 20px 0;
+}
+.hotelListItem > div.itemContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.hotelListItem > div.itemContainer:nth-child(2){
+    align-items: center;
+}
+
+.hotelListItem > div.itemContainer > div.hotelImg {
+    min-width: 90px;
+    width: 90px;
+    height: 110px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.hotelListItem > div.itemContainer > div.hotelImg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotelListItem > div.itemContainer > div.text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.hotelListItem > div.itemContainer > span {
+    font-size: 1em;
+    color: #8c8c8c;
+}
+
+.hotelListItem > div.itemContainer > span.price {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: black;
+}

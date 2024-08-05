@@ -1,0 +1,171 @@
+.flightSelectionMain {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flightSelectionMain .header {
+    margin-bottom: 20px;
+}
+
+.flightSelectionMain .header h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.flightSelectionMain .header p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.flightSelectionMain .filterOptions {
+    display: flex;
+    gap: 10px;
+}
+
+.flightSelectionMain .filterOptions button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+}
+
+.flightSelectionMain .filterOptions button.active {
+    background-color: #39b0ff;
+    color: white;
+    border: none;
+}
+
+.flightList {
+    margin-top: 20px;
+}
+
+.flightList h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.flightItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.flightItem:hover {
+    background-color: #f5f5f5;
+}
+
+.flightDetails {
+    font-size: 1em;
+    color: #333;
+}
+
+.flightDetails p {
+    margin: 0;
+}
+
+.flightPrice {
+    text-align: right;
+}
+
+.flightPrice span {
+    display: block;
+}
+
+.flightPrice span:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.flightPrice span:last-child {
+    font-size: 0.9em;
+    color: #39b0ff;
+}
+
+.selectedFlight {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.selectedFlight h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.resetButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #555;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.resetButton:hover {
+    background-color: #e5e5e5;
+}
+
+.bookingSummary {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.bookingSummary .summaryItem {
+    margin-bottom: 20px;
+}
+
+.bookingSummary .summaryItem h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bookingSummary .totalPrice {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.bookingSummary .totalPrice p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.btnSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bookButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #39b0ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bookButton:hover {
+    background-color: #368fff;
+}

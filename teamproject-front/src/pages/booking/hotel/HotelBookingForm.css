@@ -1,0 +1,122 @@
+div.HotelBookingForm{
+    text-align: left;
+    padding: 30px;
+    white-space: wrap;
+}
+div.HotelBookingForm input{
+    padding: 0 16px;
+    border: none;
+    font-size: 1em;
+    height: 40px;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+div.HotelBookingForm input:focus{
+    outline: none;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.RoomImg{
+    margin: 15px 0;
+    position: relative;
+    width: 100%;
+    padding-top: 30%;
+    overflow: hidden;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.RoomImg>img{
+    border: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingDate{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    text-align: center;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingDate .text{
+    color: #39b0ff;
+    font-size: 0.8em;
+    margin-bottom: 3px;
+}
+
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingDate .date{
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingDate .time{
+    font-size: 0.8em;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingRoomInfo{
+    margin-top: 20px;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingRoomInfo>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingRoomInfo>.roomType{
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+div.HotelBookingForm>div.HotelBookingHeader>div.bookingRoomInfo .text{
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+div.HotelBookingForm>form.bookingMemberForm{
+    margin-top: 20px;
+    width: 100%;
+}
+div.HotelBookingForm>form.bookingMemberForm > div.memberInfo{
+    padding: 10px 0;
+}
+div.HotelBookingForm>form.bookingMemberForm > div.memberInfo label{
+    display: block;
+    margin: 15px 0 5px 0;
+    font-size: 0.8em;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.priceInfo{
+    margin-top: 20px;
+    padding: 10px 0;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.priceInfo>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.priceInfo > div.totalPrice>.text{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.priceInfo > div.totalPrice>.price{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.priceInfo > div.savePointInfo > .savePoint{
+    color: #39b0ff;
+    font-weight: 600;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.btnSection{
+    margin-top: 20px;
+    width: 100%;
+}
+div.HotelBookingForm>form.bookingMemberForm>div.btnSection > button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
+    background-color: #39b0ff;
+    border-radius: 6px;
+    border: none;
+}

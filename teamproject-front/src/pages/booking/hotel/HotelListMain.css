@@ -1,0 +1,67 @@
+.hotelListMain {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hotelListMain .hotelListMain_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hotelListMain .filterBar{
+    display: flex;
+    width: 50%;
+    white-space: nowrap;
+}
+
+.hotelListMain .filterBar button {
+    background-color: white;
+    border: 1px solid #368fff;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #368fff;
+}
+.hotelListMain .filterBar button.dateOption {
+    background-color: #368fff;
+    color: white;
+    font-weight: bold;
+}
+
+.hotelListMain div.hotelItem > div.itemContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.hotelListMain .hotelItem > div.itemContainer > div.hotelImg {
+    min-width: 90px;
+    width: 90px;
+    height: 110px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.hotelListMain .hotelItem > div.itemContainer > div.hotelImg >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hotelListMain .hotelItem > div.itemContainer >div.text{
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+.hotelListMain .hotelItem > div.itemContainer > span{
+    font-size: 1em;
+    color: #8c8c8c;
+}
+
+.hotelListMain .hotelItem > div.itemContainer > span.price{
+    font-size: 1.4em;
+    font-weight: 600;
+    color: black;
+}
