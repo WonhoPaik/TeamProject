@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+
+.profilepic-background {
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
+}
+
+.profilepic-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 550px;
+    margin-top: 20px;
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.profilepic-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.profilepic-item h2 {
+    line-height: 1;
+    color: white;
+}
+
+.profilepic-text-item h2 {
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+}
+
+.profilepic-text-item p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.profilepic-social-icon a i {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.profilepic-social-icon a:hover i {
+    transform: scale(1.2);
+}
+
+.profilepic-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.profilepic-form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s ease-in-out;
+}
+
+.profilepic-form-box label {
+    font-size: 22px;
+
+}
+
+.profilepic-input-box {
+    width: 450px;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    position: relative;
+}
+
+.profilepic-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+}
+
+.profilepic-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    pointer-events: none;
+    transition: .5s ease;
+    color: #ffffff;
+}
+
+.profilepic-input-box .profilepic-icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+.profilepic-input-box input:focus ~ label,
+.profilepic-input-box input:valid ~ label {
+    top: -5px;
+}
+
+.profilepic-error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.profilepic-btn {
+    background: #fff;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #E49A8E;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+}
+
+.profilepic-btn:hover {
+    background: #E49A8E;
+    color: #fff;
+}
+
+.profilepic-login-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.profilepic-login-link p a {
+    color: #fff;
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.profilepic-login-link p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .profilepic-container {
+        width: 90%;
+    }
+}
