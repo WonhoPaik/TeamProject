@@ -1,0 +1,109 @@
+.inquiry-history-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.inquiry-history-container .inquiry-history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inquiry-history-container .inquiry-history-header .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.inquiry-history-container .inquiry-history-header h1 {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.inquiry-history-container .inquiry-history-header .inquiry-button {
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inquiry-history-container .inquiry-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.inquiry-history-container .inquiry-tabs .tab-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    flex-grow: 1;
+    color: #999;
+}
+
+.inquiry-history-container .inquiry-tabs .tab-button.selected {
+    color: #000;
+    border-bottom: 2px solid blue;
+}
+
+.inquiry-history-container .inquiry-empty-state {
+    margin-top: 100px;
+}
+
+.inquiry-history-container .inquiry-empty-state .empty-icon {
+    font-size: 50px;
+    color: #ccc;
+}
+
+.inquiry-history-container .inquiry-empty-state p {
+    color: #999;
+    margin: 10px 0;
+}
+
+.inquiry-history-container .inquiry-list {
+    margin-top: 20px;
+}
+
+.inquiry-history-container .inquiry-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inquiry-history-container .inquiry-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .inquiry-history-container .inquiry-history-header h1 {
+        font-size: 20px;
+    }
+
+    .inquiry-history-container .inquiry-history-header .back-button {
+        font-size: 20px;
+    }
+
+    .inquiry-history-container .inquiry-history-header .inquiry-button {
+        font-size: 14px;
+    }
+
+    .inquiry-history-container .inquiry-tabs .tab-button {
+        font-size: 14px;
+    }
+
+    .inquiry-history-container .inquiry-empty-state .empty-icon {
+        font-size: 40px;
+    }
+}

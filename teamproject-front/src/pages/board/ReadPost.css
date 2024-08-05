@@ -1,0 +1,113 @@
+.readpost-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.readpost-container .readpost-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.readpost-container .readpost-header .back-button,
+.readpost-container .readpost-header .more-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.readpost-container .readpost-header h1 {
+    font-size: 24px;
+}
+
+.readpost-container .post-detail {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.readpost-container .post-detail .post-header {
+    display: flex;
+    align-items: center;
+}
+
+.readpost-container .post-detail .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.readpost-container .post-detail .post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.readpost-container .post-detail .username {
+    font-weight: bold;
+}
+
+.readpost-container .post-detail .location-date {
+    color: #888;
+}
+
+.readpost-container .post-detail .post-content {
+    margin: 10px 0;
+}
+
+.readpost-container .post-detail .post-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}
+
+.readpost-container .comments-section {
+    margin-top: 20px;
+}
+
+.readpost-container .comments-section .comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.readpost-container .comments-section .comment .comment-content {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.readpost-container .comments-section .comment .comment-username {
+    font-weight: bold;
+}
+
+.readpost-container .comments-section .comment .comment-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 12px;
+}
+
+.readpost-container .comment-input-section {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.readpost-container .comment-input-section input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.readpost-container .comment-input-section button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    padding: 10px;
+}

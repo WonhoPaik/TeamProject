@@ -1,0 +1,142 @@
+.writenotice-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.writenotice-container .writenotice-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.writenotice-container .writenotice-header .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.writenotice-container .writenotice-header h1 {
+    font-size: 24px;
+}
+
+.writenotice-container .writenotice-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.writenotice-container .writenotice-form .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.writenotice-container .writenotice-form .required {
+    color: red;
+}
+
+.writenotice-container .writenotice-form .form-input,
+.writenotice-container .writenotice-form .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.writenotice-container .file-upload-section {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.writenotice-container .file-upload-section .file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.writenotice-container .file-upload-section .file-upload .file-input {
+    flex: 1;
+}
+
+.writenotice-container .file-upload-section .file-upload .file-upload-info {
+    flex: 2;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.writenotice-container .file-upload-section .file-upload .file-upload-info span {
+    font-size: 12px;
+    color: #888;
+}
+
+.writenotice-container .file-upload-section .file-upload .file-upload-info .file-upload-count {
+    color: #000;
+}
+
+.writenotice-container .terms {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.writenotice-container .terms .terms-links {
+    margin-top: 10px;
+}
+
+.writenotice-container .terms .terms-links label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.writenotice-container .submit-button {
+    padding: 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.writenotice-container .submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .writenotice-container {
+        padding: 10px;
+    }
+
+    .writenotice-container .writenotice-header h1 {
+        font-size: 20px;
+    }
+
+    .writenotice-container .writenotice-header .back-button {
+        font-size: 20px;
+    }
+
+    .writenotice-container .writenotice-form .form-label {
+        font-size: 14px;
+    }
+
+    .writenotice-container .writenotice-form .form-input,
+    .writenotice-container .writenotice-form .form-textarea {
+        font-size: 14px;
+    }
+
+    .writenotice-container .file-upload-section .file-upload .file-upload-info span {
+        font-size: 10px;
+    }
+
+    .writenotice-container .terms {
+        font-size: 12px;
+    }
+
+    .writenotice-container .submit-button {
+        font-size: 14px;
+    }
+}

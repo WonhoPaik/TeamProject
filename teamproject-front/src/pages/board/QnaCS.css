@@ -1,0 +1,129 @@
+.qnacs-container-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.qnacs-container-main .qnacs-navbar-frame {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.qnacs-container-main .qnacs-navbar-frame .qnacs-sub {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.qnacs-container-main .qnacs-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+.qnacs-container-main .qnacs-tabs .qnacs-tab {
+    flex: 1;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.qnacs-container-main .qnacs-tabs .qnacs-tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.qnacs-container-main .qnacs-faq-list {
+    margin-bottom: 2em;
+}
+
+.qnacs-container-main .qnacs-faq-list .faq-item {
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.qnacs-container-main .qnacs-faq-list .faq-item:hover {
+    background-color: #f9f9f9;
+}
+
+.qnacs-container-main .qnacs-faq-list .faq-item .faq-question {
+    font-weight: bold;
+}
+
+.qnacs-container-main .qnacs-faq-list .faq-item .faq-answer {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.qnacs-container-main .qnacs-form-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.qnacs-container-main .qnacs-form-header .qnacs-header-text {
+    margin-left: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.qnacs-container-main .qnacs-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.qnacs-container-main .qnacs-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.qnacs-container-main .qnacs-form-group.small {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.qnacs-container-main .qnacs-form-group.large {
+    flex: 2;
+}
+
+.qnacs-container-main .qnacs-form-group .qnacs-label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.qnacs-container-main .qnacs-select,
+.qnacs-container-main .qnacs-input,
+.qnacs-container-main .qnacs-textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.qnacs-container-main .qnacs-textarea {
+    height: 150px; /* 내용 칸을 더 크게 만듦 */
+}
+
+.qnacs-container-main .qnacs-button {
+    padding: 0.75em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qnacs-container-main .qnacs-button:hover {
+    background-color: #0056b3;
+}

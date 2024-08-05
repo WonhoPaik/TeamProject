@@ -1,0 +1,117 @@
+.admin-board-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.admin-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.admin-board-header h1 {
+    margin: 0;
+}
+
+.admin-board-header .search-form {
+    display: flex;
+    align-items: center;
+}
+
+.admin-board-header .search-form select,
+.admin-board-header .search-form input {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.admin-board-header .search-form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin-board-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-board-tab {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    flex: 1 1 13%;
+    text-align: center;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.admin-board-tab.active {
+    border: 2px solid #000;
+    background-color: #e0e0e0;
+}
+
+.admin-board-actions {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.admin-board-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.admin-board-posts {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin-board-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin-board-post input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.admin-board-post span {
+    flex-grow: 1;
+}
+
+.admin-board-post button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .admin-board-tab {
+        flex: 1 1 30%;
+    }
+
+    .admin-board-post button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-board-tab {
+        flex: 1 1 100%;
+    }
+
+    .admin-board-post button {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,100 @@
+.notice-board-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.notice-board-container .notice-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.notice-board-container .notice-board-header .back-button,
+.notice-board-container .notice-board-header .home-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.notice-board-container .notice-board-header h1 {
+    font-size: 24px;
+}
+
+.notice-board-container .notice-board-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.notice-board-container .notice-board-tabs .tab-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    border-bottom: 2px solid transparent;
+}
+
+.notice-board-container .notice-board-tabs .tab-button.active {
+    color: #000;
+    border-bottom: 2px solid blue;
+}
+
+.notice-board-container .notice-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notice-board-container .notice-list .notice-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice-board-container .notice-list .notice-item .notice-title {
+    display: flex;
+    align-items: center;
+}
+
+.notice-board-container .notice-list .notice-item .notice-title .new-badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.notice-board-container .notice-list .notice-item .notice-date {
+    color: #888;
+}
+
+.notice-board-container .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.notice-board-container .pagination .page-number,
+.notice-board-container .pagination .page-arrow {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #999;
+}
+
+.notice-board-container .pagination .page-number.active,
+.notice-board-container .pagination .page-arrow:disabled {
+    color: blue;
+    font-weight: bold;
+    cursor: not-allowed;
+}

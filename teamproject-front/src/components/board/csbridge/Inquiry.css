@@ -1,0 +1,142 @@
+.inquiry-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.inquiry-container .inquiry-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inquiry-container .inquiry-header .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.inquiry-container .inquiry-header h1 {
+    font-size: 24px;
+}
+
+.inquiry-container .inquiry-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inquiry-container .inquiry-form .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inquiry-container .inquiry-form .required {
+    color: red;
+}
+
+.inquiry-container .inquiry-form .form-input,
+.inquiry-container .inquiry-form .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inquiry-container .file-upload-section {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.inquiry-container .file-upload-section .file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inquiry-container .file-upload-section .file-upload .file-input {
+    flex: 1;
+}
+
+.inquiry-container .file-upload-section .file-upload .file-upload-info {
+    flex: 2;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry-container .file-upload-section .file-upload .file-upload-info span {
+    font-size: 12px;
+    color: #888;
+}
+
+.inquiry-container .file-upload-section .file-upload .file-upload-info .file-upload-count {
+    color: #000;
+}
+
+.inquiry-container .terms {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.inquiry-container .terms .terms-links {
+    margin-top: 10px;
+}
+
+.inquiry-container .terms .terms-links label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inquiry-container .submit-button {
+    padding: 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.inquiry-container .submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .inquiry-container {
+        padding: 10px;
+    }
+
+    .inquiry-container .inquiry-header h1 {
+        font-size: 20px;
+    }
+
+    .inquiry-container .inquiry-header .back-button {
+        font-size: 20px;
+    }
+
+    .inquiry-container .inquiry-form .form-label {
+        font-size: 14px;
+    }
+
+    .inquiry-container .inquiry-form .form-input,
+    .inquiry-container .inquiry-form .form-textarea {
+        font-size: 14px;
+    }
+
+    .inquiry-container .file-upload-section .file-upload .file-upload-info span {
+        font-size: 10px;
+    }
+
+    .inquiry-container .terms {
+        font-size: 12px;
+    }
+
+    .inquiry-container .submit-button {
+        font-size: 14px;
+    }
+}
