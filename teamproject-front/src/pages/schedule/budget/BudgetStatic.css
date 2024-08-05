@@ -1,0 +1,98 @@
+.budget-static-container {
+  padding: 20px;
+  color: #000000;
+  background-color: #ffffff;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.budget-static-container .icon {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+justify-content: left;
+}
+
+.budget-static-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.budget-static-container h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.budget-static-container .total-expense {
+  font-size: 18px;
+  width:30%;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.budget-static-container .total-expense p {
+  padding: 5px 0;
+  margin: 0;
+}
+
+.budget-static-container .highest-spending {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.budget-static-container .highest-spending p {
+  margin: 0;
+}
+.budget-static-container .highest-spending .category{
+  font-weight: bold;
+}
+
+.budget-static-container .category-expenses {
+  border-top: 1px dashed #000000;
+  padding-top: 20px;
+}
+
+.budget-static-container .category-expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.budget-static-container .category-name {
+  font-size: 16px;
+  flex: 1;
+}
+
+.budget-static-container .category-amount {
+  font-size: 16px;
+  flex: 1;
+  text-align: right;
+}
+
+.budget-static-container .category-percentage {
+  font-size: 16px;
+  flex: 1;
+  text-align: right;
+  color: blue;
+}
+
+.budget-static-container .chart-container {
+  height: 50%;
+  width: 100%;
+display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+
+
+.budget-static-container .chart-pie {
+  width: 100%;
+  height: 400px;
+
+}

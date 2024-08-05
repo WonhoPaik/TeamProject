@@ -1,0 +1,91 @@
+.expense-page-container {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.expense-page-container .icon-btn{
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+}
+.expense-page-container .date-payment-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.expense-page-container .form-group {
+  margin-bottom: 20px;
+}
+
+.expense-page-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+text-align: left;
+}
+
+.expense-page-container .date-payment-container label{
+  text-align: center;
+}
+.expense-page-container .form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+
+
+.expense-page-container .form-group input::placeholder,
+.form-group select::placeholder {
+  color: #999;
+}
+
+.expense-page-container .submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.expense-page-container .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.expense-page-container .category-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding: 20px 0;
+}
+
+.expense-page-container .category-icons button{
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 5%;
+  padding-top: 1%;
+  font-size: 25px;
+}
+
+.expense-page-container .category-icons .selected {
+  color: #007bff;
+}
+
+.expense-page-container .category-icons svg {
+  cursor: pointer;
+  font-size: 1.5em;
+}

@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.Header-container {
+  position: relative;
+}
+
+.Header-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Header-container .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Header-container .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.Header-container .menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.Header-container .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.Header-container .sidebar.open {
+  width: 250px;
+}
+
+.Header-container .sidebar .menu-lists {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Header-container .sidebar .menu-lists .menu {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.Header-container .sidebar .menu-lists .menu .link {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.Header-container .sidebar .menu-lists .menu .link:hover {
+  background-color: #ddd;
+}
+
+.Header-container .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  cursor: pointer;
+}
