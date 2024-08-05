@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.usermgmt-widget {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.usermgmt-widget h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.usermgmt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.usermgmt-table th,
+.usermgmt-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+
+.usermgmt-table th {
+    background-color: #e8e8e8;
+    font-weight: bold;
+    text-align: center;
+}
+
+.usermgmt-button {
+    padding: 5px 10px;
+    background-color: #e8e8e8;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.usermgmt-button:hover {
+    background-color: #d0d0d0;
+}
+
+.usermgmt-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100px;
+}
+
+.usermgmt-select:focus {
+    border-color: #007bff;
+}
+
+.usermgmt-select option {
+    padding: 8px;
+    background-color: white;
+    color: #333;
+}

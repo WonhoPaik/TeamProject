@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+
+.signup-background {
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
+}
+
+.signup-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 1080px;
+    margin-top: 35px;
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.signup-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.signup-item h2 {
+    line-height: 1;
+    color: white;
+}
+
+.signup-item .logo {
+    color: #fff;
+    font-size: 30px;
+}
+
+.signup-text-item h2 {
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+}
+
+.signup-text-item p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.signup-social-icon a i {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.signup-social-icon a:hover i {
+    transform: scale(1.2);
+}
+
+.signup-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.signup-form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s ease-in-out;
+}
+
+.signup-form-box.register {
+    transform: translateX(430px);
+}
+
+.signup-form-box h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.signup-input-box {
+    width: 450px;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    position: relative;
+}
+
+.signup-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+}
+
+.signup-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.signup-input-box .signup-icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+.signup-input-box input:focus ~ label,
+.signup-input-box input:valid ~ label,
+.signup-input-box-gender select:focus ~ label,
+.signup-input-box-gender select:valid ~ label,
+.signup-post-input-btn input:focus ~ label,
+.signup-post-input-btn input:valid ~ label {
+    top: -5px;
+    transition: .5s ease;
+}
+
+.signup-input-box label,
+.signup-input-box-gender label,
+.signup-post-input-btn label {
+    transition: .5s ease;
+}
+
+.signup-checkbox-group {
+    margin-top: 20px;
+}
+
+.signup-checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.signup-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.signup-error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.signup-btn {
+    background: #fff;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #BBBFCA;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+}
+
+.signup-login-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.signup-login-link p a {
+    color: #fff;
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.signup-login-link p a:hover {
+    text-decoration: underline;
+}
+
+.signup-postcode-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.signup-modal-close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.signup-post-input-btn {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+    }
+}
+
+.signup-smallBtn {
+    background: none;
+    width: 50%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    /*box-shadow: rgba(0, 0, 0, 0.4);*/
+    margin-top: 10px;
+    text-align: right; /* 텍스트를 오른쪽 정렬 */
+    padding-right: 30px; /* 오른쪽에 패딩 추가 */
+    padding: 0 10px; /* 패딩을 추가해서 텍스트가 잘리지 않게 합니다 */
+
+}
+
+.signup-smallBtn-postal {
+    background: none;
+    width: 50%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    /*box-shadow: rgba(0, 0, 0, 0.4);*/
+    margin-top: 10px;
+}
+
+.signup-input-box-gender {
+    width: 450px;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px; /* 오른쪽에 패딩 추가 */
+    align-items: center; /* 수직 정렬을 중앙으로 */
+
+}
+
+.signup-input-box-gender label {
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+.signup-input-box-gender select {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: right; /* 텍스트를 오른쪽 정렬 */
+    padding: 0 10px; /* 패딩을 추가해서 텍스트가 잘리지 않게 합니다 */
+
+}
+
+.signup-input-box input,
+.signup-input-box-gender select,
+.signup-post-input-btn input {
+    color: #ffffff; /* 텍스트 색상을 밝은 흰색으로 설정 */
+}
+
+/* placeholder 텍스트 색상 조정 */
+.signup-input-box input::placeholder,
+.signup-post-input-btn input::placeholder {
+    color: #e0e0e0; /* placeholder 텍스트 색상을 더 밝게 설정 */
+}

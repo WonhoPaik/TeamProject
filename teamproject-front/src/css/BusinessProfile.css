@@ -1,0 +1,138 @@
+/* 구글 폰트 임포트 규칙을 스타일시트 맨 위로 이동 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.business-profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.business-profile-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.business-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.business-profile-form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.business-profile-form-group label {
+    color: #555;
+    font-weight: 700;
+    width: 150px; /* 라벨의 고정 너비를 설정 */
+}
+
+.business-profile-form-group input[type="text"],
+.business-profile-form-group input[type="email"],
+.business-profile-form-group input[type="file"],
+.business-profile-form-group input[type="password"],
+.business-profile-form-group input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.business-profile-form-group input[type="text"]:focus,
+.business-profile-form-group input[type="email"]:focus,
+.business-profile-form-group input[type="file"]:focus,
+.business-profile-form-group input[type="password"]:focus,
+.business-profile-form-group input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.business-profile-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.business-profile-checkbox-group label {
+    color: #555;
+    font-weight: 700;
+}
+
+.business-profile-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.business-profile-form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.business-profile-form-actions button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.business-profile-form-actions button:hover {
+    background-color: #0056b3;
+}
+
+.business-profile-form-actions button[type="button"] {
+    background-color: #6c757d;
+}
+
+.business-profile-form-actions button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+.business-profile-delete-button {
+    background-color: #dc3545;
+}
+
+.business-profile-delete-button:hover {
+    background-color: #c82333;
+}
+
+.business-profile-post-input-btn {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.business-profile-post-input-btn input[type="text"] {
+    flex: 1;
+}
+
+.business-profile-smallBtn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.business-profile-smallBtn:hover {
+    background-color: #0056b3;
+}

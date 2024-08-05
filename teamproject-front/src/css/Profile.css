@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 컨테이너 스타일링 */
+.profile-container {
+    border: 0.5px solid black;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 헤딩 스타일링 */
+.profile-container h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 폼 스타일링 */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 폼 그룹 스타일링 */
+.profile-form-group {
+    margin-bottom: 20px;
+}
+
+/* 레이블 스타일링 */
+.profile-form-group label {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* 입력 필드 스타일링 */
+.profile-form-group input[type="text"],
+.profile-form-group input[type="email"],
+.profile-form-group input[type="date"],
+.profile-form-group input[type="file"],
+.profile-form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.profile-form-group input[type="text"]:focus,
+.profile-form-group input[type="email"]:focus,
+.profile-form-group input[type="date"]:focus,
+.profile-form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* 파일 입력 필드 스타일링 */
+.profile-form-group input[type="file"] {
+    margin-top: 10px;
+}
+
+/* 에러 메시지 스타일링 */
+.profile-error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* 버튼 스타일링 */
+.profile-cancelBtn,
+.profile-saveBtn,
+.profile-deleteBtn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.profile-cancelBtn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.profile-cancelBtn:hover {
+    background-color: #5a6268;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-saveBtn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.profile-saveBtn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-deleteBtn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.profile-deleteBtn:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 체크박스 그룹 스타일링 */
+.profile-checkbox-group {
+    margin-bottom: 20px;
+}
+
+.profile-checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.profile-checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* 우편번호 및 주소 입력 스타일링 */
+.profile-post-input-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-post-input-btn input[type="text"] {
+    flex: 1;
+}
+
+/* 프로필 사진 미리보기 스타일링 */
+.profile-form-group img {
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 폼 액션 버튼 그룹 */
+.profile-form-actions {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+/* 모달 스타일링 */
+#postcode-container {
+    width: 100%;
+    height: 400px;
+}

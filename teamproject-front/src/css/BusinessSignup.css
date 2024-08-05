@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* BusinessSignup.css */
+.business-signup-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 100px;
+    background-color: white;
+}
+
+.business-signup-container h2 {
+    color: black;
+}
+
+.business-signup-container .business-signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.business-signup-container .form-group {
+    margin-bottom: 15px;
+    /*요소를 정렬할 수 있는 방법*/
+    display: flex;
+    flex-direction: column;
+}
+
+.business-signup-container .form-group label {
+    color: black;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.business-signup-container .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.business-signup-container .form-group input[type="file"] {
+    margin-top: 5px;
+}
+
+.business-signup-container .error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.business-signup-container button {
+    padding: 10px;
+    background-color: #6A6B81;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.business-signup-container button:disabled {
+    background-color: #ccc;
+}
+
+.business-signup-container .smallBtn {
+    background-color: black;
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 350px;
+    box-shadow: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+
+.business-signup-container .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* BusinessSignup.css */
+
+/* 다른 스타일들... */
+
+.business-signup-container .checkbox-group {
+    margin-top: 20px; /* 체크박스 그룹과 다른 요소들 사이의 간격 조정 */
+}
+
+.business-signup-container .checkbox-group label {
+    display: block; /* 각 체크박스를 블록 요소로 설정하여 여백 조정 */
+    margin-bottom: 10px; /* 체크박스와 텍스트 사이의 여백 추가 */
+    margin-left: 20px; /* 체크박스와 텍스트의 왼쪽 여백 추가 */
+
+}
+
+.business-signup-container .checkbox-group input[type="checkbox"] {
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 조정 */
+}
+
+.business-signup-container .error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* ...기타 스타일들 */

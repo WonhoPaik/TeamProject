@@ -1,0 +1,183 @@
+/* Form.css */
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+input,
+button {
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+
+body {
+    color: var(--white-color);
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== FORM CONTAINER ===============*/
+.form-container {
+    position: relative;
+    height: 200vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: url('../image/jeju.jpg') center center/cover no-repeat;
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 0.3rem;
+    margin-top: 3rem;
+}
+
+.form-container form {
+    position: relative;
+    background-color: hsla(0, 0%, 10%, 0.1);
+    border: 2px solid var(--white-color);
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    width: 700px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex; /* 변경: flex 레이아웃 적용 */
+    align-items: center; /* 레이블과 입력 필드 수직 정렬 */
+    gap: 1rem; /* 레이블과 입력 필드 사이의 간격 */
+}
+
+.form-group label {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    min-width: 100px; /* 레이블의 최소 너비 설정 */
+}
+
+.form-group input,
+.form-group select {
+    flex: 1; /* 입력 필드가 남은 공간을 차지하도록 설정 */
+    width: 100%;
+    padding: 0.8rem;
+    background: none;
+    color: var(--white-color);
+    border-bottom: 2px solid var(--white-color);
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.form-group img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.form-group button {
+    background-color: var(--white-color);
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--white-color);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+.link-button {
+    background: none;
+    color: var(--white-color);
+    font-weight: var(--font-medium);
+    border: none;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Input focus move up label */
+input:focus + label {
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+
+/* Input focus sticky top label */
+input:not(:placeholder-shown):not(:focus) + label {
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .form-container {
+        justify-content: center;
+    }
+
+    .form-container form {
+        padding: 3rem 3rem 3.5rem; /* 패딩 조정 */
+        border-radius: 1.8rem;
+    }
+
+    .form-container h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+
+.custom-background {
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
+}
+
+.custom-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 550px;
+    margin-top: 20px;
+    background: url(images/image3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+
+.custom-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.custom-item h2 {
+    line-height: 1;
+    color: white;
+}
+
+.custom-text-item h2 {
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+}
+
+.custom-text-item p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.custom-social-icon a i {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.custom-social-icon a:hover i {
+    transform: scale(1.2);
+}
+
+.custom-login-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.custom-login-section .custom-form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s ease-in-out;
+}
+
+.custom-login-section .custom-form-box.custom-register {
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+.custom-login-section.active .custom-form-box.custom-register {
+    transform: translateX(0px);
+    transition-delay: .7s;
+}
+
+.custom-login-section .custom-form-box.custom-login {
+    transform: translateX(0px);
+    transition-delay: 0.7s;
+}
+
+.custom-login-section.active .custom-form-box.custom-login {
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+.custom-form-box h2 {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.custom-input-box {
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+    position: relative;
+}
+
+.custom-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+    color: white;
+}
+
+.custom-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: none;
+    color: white;
+    transition: .5s ease;
+}
+
+.custom-input-box .custom-icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+.custom-input-box input:focus ~ label,
+.custom-input-box input:valid ~ label {
+    top: -5px;
+}
+
+.custom-remember-password {
+    font-size: 14px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-remember-password label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.custom-remember-password a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.custom-remember-password a:hover {
+    text-decoration: underline;
+}
+
+.custom-btn {
+    background: #e8e8e8;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+    background: #d0d0d0;
+}
+
+.custom-create-account {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.custom-create-account p a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.custom-create-account p a:hover {
+    text-decoration: underline;
+}
+
+.custom-toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.custom-toggle-buttons button {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #495464;
+}
+
+.custom-toggle-buttons button.active {
+    background-color: #495464;
+    color: white;
+}
+
+.custom-toggle-buttons button:not(.active):hover {
+    background-color: #e2e6ea;
+}
+
+.custom-remember-password {
+    font-size: 14px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-remember-password label {
+    display: flex;
+    align-items: center;
+}
+
+.custom-remember-password input[type="checkbox"] {
+    margin-right: 10px;
+}
