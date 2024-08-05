@@ -1,0 +1,162 @@
+.freeboard-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.freeboard-container > .freeboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.freeboard-container > .freeboard-header > .back-button, .write-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.freeboard-container > .freeboard-header h1 {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.freeboard-container > .filters {
+    display: flex;
+    /*justify-content: center;*/
+    margin-bottom: 20px;
+}
+
+.freeboard-container > .filters > .select-location, .select-topic,.check-mypost {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.freeboard-container > .filters > .check-mypost{
+
+}
+
+
+.freeboard-container > .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.freeboard-container > .posts-list > .post {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.freeboard-container > .posts-list > .post > .post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.freeboard-container > .posts-list > .post > .post-header > .post-author {
+    font-weight: bold;
+}
+
+.freeboard-container > .posts-list > .post > .post-header > .post-date {
+    color: #888;
+}
+
+.freeboard-container > .posts-list > .post > .post-content h4,.post-content p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+
+
+.freeboard-container > .posts-list > .post > .post-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.freeboard-container > .posts-list > .post > .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+.freeboard-container > .posts-list > .post > .post-footer > .post-reactions span {
+    margin-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .freeboard-container {
+        padding: 10px;
+    }
+
+    .freeboard-container > .freeboard-header h1 {
+        font-size: 20px;
+    }
+
+    .freeboard-container > .freeboard-header > .back-button, .write-button {
+        font-size: 20px;
+    }
+
+    .freeboard-container > .freeboard-header > .filter-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .freeboard-container > .posts-list > .post {
+        padding: 10px;
+    }
+
+    .freeboard-container > .posts-list > .post > .post-content h4 {
+        font-size: 16px;
+    }
+
+    .freeboard-container > .posts-list > .post > .post-content p {
+        font-size: 14px;
+    }
+
+    .freeboard-container > .posts-list > .post > .post-reactions span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .freeboard-container > .freeboard-header h1 {
+        font-size: 18px;
+    }
+
+    .freeboard-container > .freeboard-header > .back-button, .write-button {
+        font-size: 18px;
+    }
+
+    .freeboard-container > .freeboard-header > .filter-button {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .freeboard-container > .posts-list > .post > .post-content h4 {
+        font-size: 14px;
+    }
+
+    .freeboard-container > .posts-list > .post > .post-content p {
+        font-size: 12px;
+    }
+
+    .freeboard-container > .posts-list > .post-reactions span {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,170 @@
+.faq-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-container .faq-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-container .faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: ghostwhite;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.faq-container .faq-header .faq-notice-title {
+    color: red;
+    cursor: pointer;
+}
+
+.faq-container .faq-header .faq-notice {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 14px;
+}
+
+.faq-container .faq-content {
+    margin-bottom: 20px;
+}
+
+.faq-container .faq-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.faq-container .faq-section .checkmyinquiry-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.faq-container .faq-frequently-asked .faq-frequently-asked-section {
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-container .faq-frequently-asked .qnacs-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.faq-container .faq-frequently-asked .qnacs-tab {
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    flex: 1 1 30%;
+    text-align: center;
+    margin: 5px;
+    min-width: 100px;
+    border-radius: 6px;
+}
+
+.faq-container .faq-frequently-asked .qnacs-tab.active {
+    border: 1px solid #000;
+    background-color: #e0e0e0;
+}
+
+.faq-container .qnacs-faq-list .faq-item {
+    text-align: left;
+    padding: 13px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.faq-container .faq-answer{
+    /*background-color: #ccc;*/
+    padding: 13px;
+    border-top: 1px solid #ccc;
+}
+
+.faq-container .qnacs-faq-list .faq-item.expanded .faq-answer {
+    margin-top: 10px;
+}
+
+.faq-container .faq-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.faq-container .faq-button {
+    padding: 15px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    flex: 1 1 30%;
+    text-align: center;
+    margin: 5px;
+    min-width: 100px;
+    border-radius: 6px;
+}
+
+.faq-container .faq-button.service-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.faq-container .faq-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-container .faq-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faq-container .faq-header .faq-notice-title {
+        margin-bottom: 10px;
+    }
+
+    .faq-container .faq-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faq-container .faq-section .checkmyinquiry-button {
+        align-self: flex-end;
+    }
+
+    .faq-container .faq-frequently-asked .qnacs-tab {
+        flex: 1 1 45%;
+    }
+
+    .faq-container .faq-button {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container .faq-frequently-asked .qnacs-tab {
+        flex: 1 1 100%;
+    }
+
+    .faq-container .faq-button {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,141 @@
+.create-popasked-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.create-popasked-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-popasked-header .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.create-popasked-header h1 {
+    font-size: 24px;
+}
+
+.create-popasked-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.create-popasked-form .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.create-popasked-form .required {
+    color: red;
+}
+
+.create-popasked-form .form-input,
+.create-popasked-form .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-popasked-form .form-textarea {
+    height: 300px; /* 내용 입력 칸을 넓게 조정 */
+}
+
+.file-upload-section {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-input {
+    flex: 1;
+}
+
+.file-upload-info {
+    flex: 2;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-upload-info span {
+    font-size: 12px;
+    color: #888;
+}
+
+.file-upload-count {
+    color: #000;
+}
+
+.terms {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.terms-links {
+    margin-top: 10px;
+}
+
+.submit-button {
+    padding: 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .create-popasked-container {
+        padding: 10px;
+    }
+
+    .create-popasked-header h1 {
+        font-size: 20px;
+    }
+
+    .create-popasked-header .back-button {
+        font-size: 20px;
+    }
+
+    .create-popasked-form .form-label {
+        font-size: 14px;
+    }
+
+    .create-popasked-form .form-input,
+    .create-popasked-form .form-textarea {
+        font-size: 14px;
+    }
+
+    .file-upload-info span {
+        font-size: 10px;
+    }
+
+    .terms {
+        font-size: 12px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+    }
+}
