@@ -51,6 +51,11 @@ import NoticeBoard from "./components/board/csbridge/NoticeBoard.jsx";
 import InquiryHistory from "./components/board/csbridge/InquiryHistory.jsx";
 import Inquiry from "./components/board/csbridge/Inquiry.jsx";
 
+
+
+
+
+
 const places = [
   {
     no: 1,
@@ -161,6 +166,8 @@ function App() {
               <Route path="/csbridge/writenotice" element={<Writenotice/>}/>
               <Route path="/admin/checkpopasked" element={<CheckPopasked/>}/>
               <Route path="/admin/createpopasked" element={<CreatePopasked/>}/>
+
+
             </Routes>
           </section>
         </div>
