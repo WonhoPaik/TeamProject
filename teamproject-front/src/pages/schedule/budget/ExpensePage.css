@@ -70,6 +70,7 @@ text-align: left;
   justify-content: space-around;
   margin-top: 10px;
   padding: 20px 0;
+  color: #000000;
 }
 
 .expense-page-container .category-icons button{
@@ -79,6 +80,8 @@ text-align: left;
   width: 5%;
   padding-top: 1%;
   font-size: 25px;
+  color: #000000;
+  white-space: nowrap;
 }
 
 .expense-page-container .category-icons .selected {

@@ -1,3 +1,4 @@
+/* 부모 요소: .react-calendar */
 .react-calendar {
  width: 100%;
  max-width: 100%;
@@ -159,12 +160,14 @@
  background: #303f9f; /* Darker indigo */
 }
 
-.button-container {
+/* 부모 요소: .button-container */
+.react-calendar .button-container {
  display: flex;
  gap: 10px;
 }
 
-.button {
+/* 부모 요소: .button */
+.react-calendar .button {
  background-color: #007bff; /* Modern blue background */
  border: none;
  color: white; /* White text */
@@ -179,26 +182,26 @@
  transition: background-color 0.3s, transform 0.3s;
 }
 
-.button:hover {
+.react-calendar .button:hover {
  background-color: #0056b3;
 }
 
-.button:active {
+.react-calendar .button:active {
  transform: scale(0.95);
 }
 
-.button-prev {
+.react-calendar .button-prev {
  background-color: #f44336;
 }
 
-.button-next {
+.react-calendar .button-next {
  background-color: #2196f3;
 }
 
-.button-prev:hover {
+.react-calendar .button-prev:hover {
  background-color: #e53935;
 }
 
-.button-next:hover {
+.react-calendar .button-next:hover {
  background-color: #1976d2;
 }

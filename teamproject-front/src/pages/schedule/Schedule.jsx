@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import ScheduleHeader from "../../components/Schedule/ScheduleHeader.jsx";
-import TravelPlan from "../../components/Schedule/TravelPlan.jsx";
-import { useScheduleState } from '../../context/ScheduleContext'; // 올바른 경로로 수정
+
+import { useScheduleState } from '../../context/ScheduleContext';
+import ScheduleHeader from "../../components/schedule/ScheduleHeader.jsx";
+import TravelPlan from "../../components/schedule/TravelPlan.jsx"; // 올바른 경로로 수정
 
 const Schedule = () => {
   const { schedule, selectedPlaces } = useScheduleState();

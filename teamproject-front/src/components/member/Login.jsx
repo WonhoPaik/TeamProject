@@ -118,7 +118,7 @@ const Login = ({ switchToSignup }) => {
                                         <p>
                                             계정이 없으신가요?
                                             <a
-                                                href="#"
+                                                href="/Signup"
                                                 type="button"
                                                 className="custom-register-link"
                                                 onClick={switchToSignup}
