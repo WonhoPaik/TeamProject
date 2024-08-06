@@ -50,6 +50,15 @@ import Writenotice from "./components/board/csbridge/Writenotice.jsx";
 import NoticeBoard from "./components/board/csbridge/NoticeBoard.jsx";
 import InquiryHistory from "./components/board/csbridge/InquiryHistory.jsx";
 import Inquiry from "./components/board/csbridge/Inquiry.jsx";
+import FoodRead from "./components/place/foodread.jsx";
+import E_section from "./components/place/E_section.jsx";
+import FAQ from "./components/board/csbridge/FAQ.jsx";
+import TripRead from "./components/place/tripread.jsx";
+import UserReview from "./components/review/userReview.jsx";
+import TripReadCreateForm from "./components/place/TripReadCreateForm.jsx";
+import FoodReadCreateForm from "./components/place/FoodReadCreateForm.jsx";
+import ReviewCreateForm from "./components/review/ReviewCreateForm.jsx";
+import ReviewMDForm from "./components/review/ReviewMDForm.jsx";
 
 
 
@@ -103,27 +112,27 @@ function App() {
             <Routes>
               {/*명연로그인*/}
               <Route path="/login" element={<LoginForm/>}/>
+              <Route path="/login/admin" element={<AdminLoginForm/>}/> {/* UserDetail 경로 추가 */}
               <Route path="/signup" element={<SignupForm/>}/>
-              <Route path="/profilePic" element={<ProfilePicForm/>}/>
+              <Route path="/signup/business" element={<BusinessSignupForm/>}/>
+              <Route path="/signup/profilePic" element={<ProfilePicForm/>}/>
               {/*<Route path="/emailv" element={<EmailVerificationForm/>}/>*/}
               {/*<Route path="/verify-email/:token" element={<VerifyEmailForm/>}/>*/}
               {/*<Route path="/resend" element={<ResendVerificationEmailForm/>}/>*/}
-              <Route path="/change" element={<ChangePasswordForm/>}/>
+              <Route path="/member/change" element={<ChangePasswordForm/>}/>
+              <Route path="/member/modify" element={<ProfileForm/>}/>
               {/*<Route path="/delete" element={<DeleteAccountForm/>}/>*/}
-              <Route path="/modify" element={<ProfileForm/>}/>
-              <Route path="/business" element={<BusinessSignupForm/>}/>
               <Route path="/admin" element={<AdminDashboardForm/>}/>
-              <Route path="/usermanagement" element={<UserManagement/>}/>
-              <Route path="/businessmanagement" element={<BusinessManagement/>}/>
-              <Route path="/statisticsreports" element={<StatisticsReports/>}/>
-              <Route path="/contentmanagement" element={<ContentManagement/>}/>
-              <Route path="/systemsettings" element={<SystemSettings/>}/>
-              <Route path="/notificationmanagement" element={<NotificationManagement/>}/>
-              <Route path="/usermanagement/:id" element={<UserDetail/>}/> {/* UserDetail 경로 추가 */}
-              <Route path="/businessmodify" element={<BusinessProfileForm/>}/> {/* UserDetail 경로 추가 */}
-              <Route path="/adminlogin" element={<AdminLoginForm/>}/> {/* UserDetail 경로 추가 */}
-              <Route path="/businessmanagement/:id" element={<BusinessDetail/>}/> {/* UserDetail 경로 추가 */}
-              <Route path="/statistic" element={<StatisticsReportsForm/>}/> {/* UserDetail 경로 추가 */}
+              <Route path="/admin/usermanagement" element={<UserManagement/>}/>
+              <Route path="/admin/businessmanagement" element={<BusinessManagement/>}/>
+              <Route path="/admin/statisticsreports" element={<StatisticsReports/>}/>
+              <Route path="/admin/contentmanagement" element={<ContentManagement/>}/>
+              <Route path="/admin/systemsettings" element={<SystemSettings/>}/>
+              <Route path="/admin/notificationmanagement" element={<NotificationManagement/>}/>
+              <Route path="/admin/usermanagement/:id" element={<UserDetail/>}/> {/* UserDetail 경로 추가 */}
+              <Route path="/admin/businessmanagement/:id" element={<BusinessDetail/>}/> {/* UserDetail 경로 추가 */}
+              <Route path="/admin/statistic" element={<StatisticsReportsForm/>}/> {/* UserDetail 경로 추가 */}
+              <Route path="/business/businessmodify" element={<BusinessProfileForm/>}/> {/* UserDetail 경로 추가 */}
               <Route
                   path="/"
                   element={
@@ -135,39 +144,48 @@ function App() {
                   }
               />
               {/*원호 일정*/}
-              <Route path="/calendar" element={<ScheduleCalendar/>}/>
-              <Route path="/schedule" element={<Schedule/>}/>
-              <Route path="/add-place" element={<AddPlace places={places} />} />
-              <Route path="/budget" element={<BudgetPage/>}/>
-              <Route path="/add-expense" element={<ExpensePage/>}/>
-              <Route path="/edit-expense" element={<ExpensePage/>}/>
-              <Route path="/budget-static" element={<BudgetStatic/>}/>
+              <Route path="/member/calendar" element={<ScheduleCalendar/>}/>
+              <Route path="/member/schedule" element={<Schedule/>}/>
+              <Route path="/member/add-place" element={<AddPlace places={places} />} />
+              <Route path="/member/budget" element={<BudgetPage/>}/>
+              <Route path="/member/add-expense" element={<ExpensePage/>}/>
+              <Route path="/member/edit-expense" element={<ExpensePage/>}/>
+              <Route path="/member/budget-static" element={<BudgetStatic/>}/>
               {/*우경 정보 및 예약*/}
               {/*호텔/객실*/}
-              <Route path="/booking/hotel/list" element={<HotelListMain/>}/>
-              <Route path="/booking/hotel/info" element={<HotelInfo/>}/>
-              <Route path="/booking/hotel/roominfo" element={<RoomInfo/>}/>
-              <Route path="/booking/hotel/bookingform" element={<HotelBookingForm/>}/>
+              <Route path="/hotel/list" element={<HotelListMain/>}/>
+              <Route path="/hotel/info" element={<HotelInfo/>}/>
+              <Route path="/hotel/roominfo" element={<RoomInfo/>}/>
+              <Route path="/member/hotel/bookingform" element={<HotelBookingForm/>}/>
               {/*항공*/}
-              <Route path={"/booking/flight"} element={<FlightSelection/>}/>
-              <Route path={"/booking/flight/bookingform"} element={<FlightBookingForm/>}/>
+              <Route path={"/flight"} element={<FlightSelection/>}/>
+              <Route path={"/member/flight/bookingform"} element={<FlightBookingForm/>}/>
               {/*사업자회원 호텔/객실 (등록/수정/삭제)*/}
               <Route path="/business/hotel/new" element={<HotelRegistrationForm/>}/>
               <Route path="/business/rooms/new" element={<RoomRegistrationForm/>}/>
               {/*준호 게시판*/}
-              <Route path="/page/freeboard" element={<FreeBoard/>}/>
-              <Route path="/page/writepostfb" element={<WritePostFB/>}/>
-              <Route path="/page/readpost/:id" element={<ReadPost/>}/>
-              <Route path="/page/qnacs" element={<QnaCS/>}/>
-              <Route path="/csbridge/faq" element={<Entry/>}/>
-              <Route path="/csbridge/inquiry" element={<Inquiry/>}/>
-              <Route path="/csbridge/inquiryHistory" element={<InquiryHistory/>}/>
-              <Route path="/csbridge/notice" element={<NoticeBoard/>}/>
-              <Route path="/csbridge/writenotice" element={<Writenotice/>}/>
+              {/*자유게시판(배낭톡)*/}
+              <Route path="/freeboard" element={<FreeBoard/>}/>
+              <Route path="/readpost/:id" element={<ReadPost/>}/>
+              <Route path="/member/writepostfb" element={<WritePostFB/>}/>
+              {/*고객센터 */}
+              <Route path="/admin/writepopasked" element={<CreatePopasked/>}/>
               <Route path="/admin/checkpopasked" element={<CheckPopasked/>}/>
-              <Route path="/admin/createpopasked" element={<CreatePopasked/>}/>
-
-
+              <Route path="/member/inquiry" element={<Inquiry/>}/>
+              <Route path="/member/inquiryHistory" element={<InquiryHistory/>}/>
+              <Route path="/faq" element={<FAQ/>}/>
+              <Route path="/notice" element={<NoticeBoard/>}/>
+              <Route path="/admin/writenotice" element={<Writenotice/>}/>
+              {/*곽기명*/}
+              {/*관광지,맛집,리뷰게시판*/}
+              <Route path="/E_Section" element={<E_section />}/>
+              <Route path="/trip/detail/:NO" element={<TripRead />} />
+              <Route path="/restaurant/detail/:NO" element={<FoodRead />}/>
+              <Route path="/userReview" element={<UserReview />}/>
+              <Route path="/admin/tripReadCreateForm" element={<TripReadCreateForm />}/>
+              <Route path="/admin/foodReadCreateForm" element={<FoodReadCreateForm />}/>
+              <Route path="/member/reviewCreateForm" element={<ReviewCreateForm />}/>
+              <Route path="/member/reviewMDForm" element={<ReviewMDForm />}/>
             </Routes>
           </section>
         </div>
