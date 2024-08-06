@@ -12,32 +12,32 @@ const AdminDashboard = () => {
             </header>
             <div className="dashboard-content">
                 <div className="dashboard-widget">
-                    <Link to="/user-management">
+                    <Link to="/usermanagement">
                         <button>사용자 관리</button>
                     </Link>
                 </div>
                 <div className="dashboard-widget">
-                    <Link to="/business-management">
+                    <Link to="/businessmanagement">
                         <button>사업자 관리</button>
                     </Link>
                 </div>
                 <div className="dashboard-widget">
-                    <Link to="/statistics-reports">
+                    <Link to="/statisticsreports">
                         <button>통계 및 보고서</button>
                     </Link>
                 </div>
                 <div className="dashboard-widget">
-                    <Link to="/content-management">
+                    <Link to="/contentmanagement">
                         <button>게시판 관리</button>
                     </Link>
                 </div>
                 <div className="dashboard-widget">
-                    <Link to="/system-settings">
+                    <Link to="/systemsettings">
                         <button>시스템 설정</button>
                     </Link>
                 </div>
                 <div className="dashboard-widget">
-                    <Link to="/notification-management">
+                    <Link to="/notificationmanagement">
                         <button>알림 관리</button>
                     </Link>
                 </div>

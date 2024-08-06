@@ -2,10 +2,11 @@ import React from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import './BudgetStatic.css';
 import {useScheduleState} from '../../../context/ScheduleContext.jsx';
-import MyResponsivePie
-  from "../../../components/Schedule/ScheduleBudget/MyResponsivePie.jsx";
+
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import MyResponsivePie
+  from "../../../components/schedule/ScheduleBudget/MyResponsivePie.jsx";
 
 const BudgetStatic = () => {
   const location = useLocation();

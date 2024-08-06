@@ -39,6 +39,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;
+    color: black;
 }
 .freeboard-container > .filters > .check-mypost{
 
