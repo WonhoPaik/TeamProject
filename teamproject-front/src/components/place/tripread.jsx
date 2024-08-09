@@ -1,6 +1,8 @@
 import {  useEffect, useState } from "react"; 
 import { useParams } from "react-router"; 
 import './tripread.css';
+import { useNavigate } from "react-router-dom";
+
 
 function useFetch(url) { 
   const [data, setData] = useState(null); 
@@ -23,6 +25,11 @@ const TripRead = () => {
   const { NO } = useParams(); 
   const [data, loading] = useFetch('http://localhost:8080/trip/detail/' + NO); 
   
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    navigate(`/member/TripReadMDForm/${NO}`); // 수정 페이지로 이동
+  };
   if (loading) { 
     return (<div>Loading...</div>); 
   } else if (data) {  // data가 null이 아닌 경우에만 렌더링
@@ -73,7 +80,11 @@ const TripRead = () => {
             </div>
           </div>
         </div>
+        <div className='button-group'>
+          <button onClick={handleEdit} className='btn btn-primary'>수정</button>
+        </div>
       </div>
+      
     );
   } else {
     return <div>Error loading data</div>;

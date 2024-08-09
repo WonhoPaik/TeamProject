@@ -1,264 +1,298 @@
-import { useState } from 'react';
-import axios from 'axios';
-import './TripReadCreateForm.css';
+import { useState, useRef, useEffect } from 'react';
+import { useNavigate, useParams } from "react-router";
+import './TripReadMDForm.css';
 
-const TripReadMDForm = () => {
-    // 각 입력 필드에 대한 상태 설정
-    const [title, setTitle] = useState('');
-    const [englishTitle, setEnglishTitle] = useState('');
-    const [content1, setContent1] = useState('');
-    const [infotitle, setInfotitle] = useState('');
-    const [subImageTitle1, setSubImageTitle1] = useState('');
-    const [subImageTitle2, setSubImageTitle2] = useState('');
-    const [content2, setContent2] = useState('');
-    const [content3, setContent3] = useState('');
-    const [mainPhoto, setMainPhoto] = useState(null);
-    const [subPhoto1, setSubPhoto1] = useState(null);
-    const [subPhoto2, setSubPhoto2] = useState(null);
-    const [address, setAddress] = useState('');
-    const [phone, setPhone] = useState('');
-    const [tripId, setTripId] = useState(null); // Trip ID for update and delete
+// Custom hook for fetching data
 
-    const handlePhotoChange = (e, setPhoto) => {
-        setPhoto(e.target.files[0]);
-    };
+    
+    
+    const TripReadMDForm = () => {
+        const { NO } = useParams(); // URL에서 NO 값 가져오기
+        const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+        const [data, setData] = useState(null);
+        const [loading, setLoading] = useState(true);
+
+        
+        
+  
+        useEffect(() => {
+            if (NO) {
+                fetch(`http://localhost:8080/trip/detail/${NO}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Fetched data:', data);
+                        setData(data);
+                        setLoading(false);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        setLoading(false);
+                    });
+            } else {
+                console.error('NO 값이 없습니다.');
+                setLoading(false);
+            }
+        }, [NO]);
+        
+
+    // Refs for form fields
+    const titleRef = useRef(null);
+    const englishTitleRef = useRef(null);
+    const topicRef = useRef(null);
+    const contentRef = useRef(null);
+    const sub1TopicRef = useRef(null);
+    const sub2TopicRef = useRef(null);
+     const sub1ContentRef = useRef(null);
+    const sub2ContentRef = useRef(null);
+    const titleImgRef = useRef(null);
+    const sub1ImgRef = useRef(null);
+    const sub2TitleImgRef = useRef(null);
+    const mapImgRef = useRef(null);
+    const addressRef = useRef(null);
+    const phoneNumberRef = useRef(null);
+
+    // Handle form submission
+    const update = async (e) => {
         e.preventDefault();
-
+    
         const formData = new FormData();
-        formData.append('title', title);
-        formData.append('englishTitle', englishTitle);
-        formData.append('infotitle', title);
-        formData.append('subImageTitle1', title);
-        formData.append('subImageTitle2', title);
-        formData.append('content1', content1);
-        formData.append('content2', content2);
-        formData.append('content3', content3);
-        formData.append('mainPhoto', mainPhoto);
-        formData.append('subPhoto1', subPhoto1);
-        formData.append('subPhoto2', subPhoto2);
-        formData.append('address', address);
-        formData.append('phone', phone);
+         
+        formData.append('title', titleRef.current.value);
+        formData.append('englishTitle', englishTitleRef.current.value);
+        formData.append('topic', topicRef.current.value);
+        formData.append('content', contentRef.current.value);
 
+        formData.append('sub1Topic', sub1TopicRef.current.value);
+        formData.append('sub2Topic', sub2TopicRef.current.value);
+        formData.append('sub1Content', sub1ContentRef.current.value);
+        formData.append('sub2Content', sub2ContentRef.current.value);
+        formData.append('address', addressRef.current.value);
+        formData.append('phoneNumber', phoneNumberRef.current.value);
+    
+        if (titleImgRef.current.files.length > 0) {
+            formData.append('titleImg', titleImgRef.current.files[0]);
+        }
+        if (sub1ImgRef.current.files.length > 0) {
+            formData.append('sub1Img', sub1ImgRef.current.files[0]);
+        }
+        if (sub2TitleImgRef.current.files.length > 0) {
+            formData.append('sub2TitleImg', sub2TitleImgRef.current.files[0]);
+        }
+     
+        if (mapImgRef.current.files.length > 0) {
+            formData.append('mapImg', mapImgRef.current.files[0]);
+        }
+    
         try {
-            const response = await axios.post('/trip/new', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
+            const response = await fetch(`http://localhost:8080/trip/update/${NO}`, {
+                method: 'POST',
+                body: formData
             });
-            console.log('게시글 등록 성공:', response.data);
-            setTripId(response.data.id); // Setting the trip ID
+    
+            if (response.ok) {
+                navigate('/E_Section');
+            } else {
+                console.error('Failed to submit data');
+            }
         } catch (error) {
-            console.error('게시글 등록 실패:', error);
+            console.error('Error:', error);
         }
     };
 
-    const handleUpdate = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData();
-        formData.append('title', title);
-        formData.append('englishTitle', englishTitle);
-        formData.append('infotitle', title);
-        formData.append('subImageTitle1', title);
-        formData.append('subImageTitle2', title);
-        formData.append('content1', content1);
-        formData.append('content2', content2);
-        formData.append('content3', content3);
-        formData.append('mainPhoto', mainPhoto);
-        formData.append('subPhoto1', subPhoto1);
-        formData.append('subPhoto2', subPhoto2);
-        formData.append('address', address);
-        formData.append('phone', phone);
-
+ // Handle delete action
+ const handleDelete = async () => {
+    if (window.confirm("삭제할까요?")) {
         try {
-            const response = await axios.put(`/trip/edit/${tripId}`, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
+            const response = await fetch(`http://localhost:8080/trip/delete/${NO}`, {
+                method: 'DELETE'
             });
-            console.log('게시글 수정 성공:', response.data);
-        } catch (error) {
-            console.error('게시글 수정 실패:', error);
-        }
-    };
 
-    const handleDelete = async () => {
-        try {
-            await axios.delete(`/trip/delete/${tripId}`);
-            console.log('게시글 삭제 성공');
-            // Resetting form fields
-            setTitle('');
-            setEnglishTitle('');
-            setContent1('');
-            setInfotitle('');
-            setSubImageTitle1('');
-            setSubImageTitle2('');
-            setContent2('');
-            setContent3('');
-            setMainPhoto(null);
-            setSubPhoto1(null);
-            setSubPhoto2(null);
-            setAddress('');
-            setPhone('');
-            setTripId(null);
+            if (response.ok) {
+                navigate('/E_Section');
+            } else {
+                console.error('Failed to delete data');
+            }
         } catch (error) {
-            console.error('게시글 삭제 실패:', error);
+            console.error('Error:', error);
         }
-    };
+    }
+};
+
+
+
+
+
+
+    if(loading){ 
+        return (<div>loading</div>) 
+    }else{ 
+        let src1=''; 
+        let image_url1=''; 
+        let src2=''; 
+        let image_url2=''; 
+        let src3=''; 
+        let image_url3=''; 
+        let src4=''; 
+        let image_url4=''; 
+      
+        if(data.TILEIMG !== '-'){ 
+            src1=`http://localhost:8080/static/images/${data.TITLEIMG}`; 
+            image_url1=`<img src=${src1} width='300px' height='300px'/>`; 
+            
+        }
+        if(data.SUB1IMG !== '-'){ 
+            src2=`http://localhost:8080/static/images/${data.SUB1IMG}`; 
+            image_url2=`<img src=${src2} width='300px' height='300px'/>`; 
+            
+        }
+        if(data.SUB2TITLEIMG !== '-'){ 
+            src3=`http://localhost:8080/static/images/${data.SUB2TITLEIMG}`; 
+            image_url3=`<img src=${src3} width='300px' height='300px'/>`; 
+            
+        }
+        if(data.MAPIMG !== '-'){ 
+            src4=`http://localhost:8080/static/images/${data.MAPIMG}`; 
+            image_url4=`<img src=${src4} width='300px' height='300px'/>`; 
+            
+        }
+       
+
+        else{ 
+            image_url1=''; 
+            image_url2=''; 
+            image_url3=''; 
+            image_url4=''; 
+         
+        } 
 
     return (
-        <div className='TripReadMDForm'>
+        <div className='FoodReadMDForm'>
             <div className="form-container">
-                <h2>게시글 등록</h2>
-                <form onSubmit={handleSubmit}>
+                <h2>게시글 수정<br/>(기존사진 사용할려고해도 다시 넣어주세요)</h2>
+                <form onSubmit={update}>
                     <div className="form-group">
                         <label>제목:</label>
                         <input
-                            type="text"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            required
+                            ref={titleRef}
+                            defaultValue={data.TITLE}
                         />
                     </div>
 
                     <div className="form-group">
                         <label>제목(영어로):</label>
                         <input
-                            type="text"
-                            value={englishTitle}
-                            onChange={(e) => setEnglishTitle(e.target.value)}
-                            required
+                            ref={englishTitleRef}
+                            defaultValue={data.ENGLISHTITLE}
                         />
                     </div>
 
                     <div className="form-group">
                         <label>대표사진:</label>
-                        <input
-                            type="file"
-                            onChange={(e) => handlePhotoChange(e, setMainPhoto)}
-                            accept="image/*"
-                            required
-                        />
+                          <span dangerouslySetInnerHTML={{ __html: image_url1}}></span> 
+                        <input type='file' ref={titleImgRef} />
                     </div>
 
                     <div className="form-group">
                         <label>내용 제목:</label>
                         <input
-                            type="text"
-                            value={infotitle}
-                            onChange={(e) => setInfotitle(e.target.value)}
-                            required
+                            ref={topicRef}
+                            defaultValue={data.TOPIC}
                         />
                     </div>
-
                     <div className="form-group">
-                        <label>내용:</label>
-                        <textarea
-                            value={content1}
-                            onChange={(e) => setContent1(e.target.value)}
-                            required
-                        />
-                    </div>
+                                <label>내용:</label>
+                                <textarea rows='5' cols='60'
+                                    ref={contentRef}
+                                    defaultValue={data.CONTENT}
+                                />
+                            </div>
 
                     <h3>주요 볼거리</h3>
                     <div className="subImageGroup">
                         <div className="subshowlist">
                             <div className="form-group">
                                 <label>서브사진1:</label>
-                                <input
-                                    type="file"
-                                    onChange={(e) => handlePhotoChange(e, setSubPhoto1)}
-                                    accept="image/*"
-                                    required
-                                />
+                                <span dangerouslySetInnerHTML={{ __html: image_url2}}></span> 
+                                <input type='file' ref={sub1ImgRef} />
                             </div>
                             <div className="form-group">
                                 <label>제목:</label>
                                 <input
-                                    type="text"
-                                    value={subImageTitle1}
-                                    onChange={(e) => setSubImageTitle1(e.target.value)}
-                                    required
+                                    ref={sub1TopicRef}
+                                    defaultValue={data.SUB1TOPIC}
                                 />
                             </div>
                             <div className="form-group">
                                 <label>내용:</label>
-                                <textarea
-                                    value={content2}
-                                    onChange={(e) => setContent2(e.target.value)}
-                                    required
+                                <textarea rows='5' cols='60'
+                                    ref={sub1ContentRef}
+                                    defaultValue={data.SUB1CONTENT}
                                 />
                             </div>
                         </div>
 
-                        <div className="subshowlist2">
+                        <div className="subshowlist">
                             <div className="form-group">
                                 <label>서브사진2:</label>
-                                <input
-                                    type="file"
-                                    onChange={(e) => handlePhotoChange(e, setSubPhoto2)}
-                                    accept="image/*"
-                                    required
-                                />
+                                <span dangerouslySetInnerHTML={{ __html: image_url3}}></span> 
+                                <input type='file' ref={sub2TitleImgRef} />
                             </div>
                             <div className="form-group">
                                 <label>제목:</label>
                                 <input
-                                    type="text"
-                                    value={subImageTitle2}
-                                    onChange={(e) => setSubImageTitle2(e.target.value)}
-                                    required
+                                    ref={sub2TopicRef}
+                                    defaultValue={data.SUB2TOPIC}
                                 />
                             </div>
                             <div className="form-group">
                                 <label>내용:</label>
-                                <textarea
-                                    value={content3}
-                                    onChange={(e) => setContent3(e.target.value)}
-                                    required
+                                <textarea rows='5' cols='60'
+                                    ref={sub2ContentRef}
+                                    defaultValue={data.SUB2CONTENT}
                                 />
                             </div>
                         </div>
+
                     </div>
 
-                    <h3>기본정보</h3>
+                    <h3>지도</h3>
                     <div className="form-group">
                         <label>사진:</label>
-                        <input
-                            type="file"
-                            onChange={(e) => handlePhotoChange(e, setMainPhoto)}
-                            accept="image/*"
-                            required
-                        />
-                    </div>
+                        <span dangerouslySetInnerHTML={{ __html: image_url4}}></span> 
 
+                        <input type='file' ref={mapImgRef} />
+                    </div>
                     <div className="form-group">
                         <label>주소:</label>
                         <input
-                            type="text"
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
-                            required
+                            ref={addressRef}
+                            defaultValue={data.ADDRESS}
                         />
                     </div>
 
                     <div className="form-group">
                         <label>전화번호:</label>
                         <input
-                            type="text"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            required
+                            ref={phoneNumberRef}
+                            defaultValue={data.PHONENUMBER}
                         />
                     </div>
-                    <button type="button" onClick={handleUpdate}>수정</button>
-                    <button type="button" onClick={handleDelete}>삭제</button>
+
+                    <div className="button-group">
+                        <button type='submit' className='btn btn-info'>수정</button>
+                        <button type='button' className='btn btn-info' onClick={handleDelete}>삭제</button>
+                    </div>
                 </form>
             </div>
         </div>
     );
-};
+}
+    };
 
 export default TripReadMDForm;

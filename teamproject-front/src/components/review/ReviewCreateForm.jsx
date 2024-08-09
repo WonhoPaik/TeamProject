@@ -1,56 +1,52 @@
-import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ReviewCreateForm.css';
 
 const ReviewCreateForm = () => {
+    
     const navigate = useNavigate();
-    const tripReview_title = useRef();
-    const tripReview_titleImg = useRef();
-    const tripReview_topic = useRef();
-    const tripReview_content = useRef();
-    const tripReview_sub1Img = useRef();
-    const tripReview_sub1Topic = useRef();
-    const tripReview_sub1Content = useRef();
-    const tripReview_sub2TitleImg = useRef();
-    const tripReview_sub2Topic = useRef();
-    const tripReview_sub2Content = useRef();
+    const title = useRef();
+
+    
+    const titleImg = useRef();
+    const topic = useRef();
+    const content = useRef();
+    const sub1Img = useRef();
+    const sub1Topic = useRef();
+    const sub1Content = useRef();
+    const sub2TitleImg = useRef();
+    const sub2Topic = useRef();
+    const sub2Content = useRef();
+   
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         // Create FormData object
         const form = new FormData();
-        form.append('tripReview_title', tripReview_title.current.value);
-        form.append('tripReview_topic', tripReview_topic.current.value);
-        form.append('tripReview_content', tripReview_content.current.value);
-        form.append('tripReview_sub1Topic', tripReview_sub1Topic.current.value);
-        form.append('tripReview_sub1Content', tripReview_sub1Content.current.value);
-        form.append('tripReview_sub2Topic', tripReview_sub2Topic.current.value);
-        form.append('tripReview_sub2Content', tripReview_sub2Content.current.value);
-
-        // Log form data
-        console.log('Form Data:');
-        console.log('tripReview_title:', tripReview_title.current.value);
-        console.log('tripReview_topic:', tripReview_topic.current.value);
-        console.log('tripReview_content:', tripReview_content.current.value);
-        console.log('tripReview_sub1Topic:', tripReview_sub1Topic.current.value);
-        console.log('tripReview_sub1Content:', tripReview_sub1Content.current.value);
-        console.log('tripReview_sub2Topic:', tripReview_sub2Topic.current.value);
-        console.log('tripReview_sub2Content:', tripReview_sub2Content.current.value);
+        form.append('title', title.current.value);
+    
+        form.append('topic', topic.current.value);
+        form.append('content', content.current.value);
+        form.append('sub1Topic', sub1Topic.current.value);
+        form.append('sub1Content', sub1Content.current.value);
+        form.append('sub2Topic', sub2Topic.current.value);
+        form.append('sub2Content', sub2Content.current.value);
 
         // Log file data
-        if (tripReview_titleImg.current.files.length > 0) {
-            console.log('tripReview_titleImg:', tripReview_titleImg.current.files[0].name);
-            form.append('tripReview_titleImg', tripReview_titleImg.current.files[0]);
+        if (titleImg.current.files.length > 0) {
+            console.log('titleImg:', titleImg.current.files[0].name);
+            form.append('titleImg', titleImg.current.files[0]);
         }
-        if (tripReview_sub1Img.current.files.length > 0) {
-            console.log('tripReview_sub1Img:', tripReview_sub1Img.current.files[0].name);
-            form.append('tripReview_sub1Img', tripReview_sub1Img.current.files[0]);
+        if (sub1Img.current.files.length > 0) {
+            console.log('sub1Img:',sub1Img.current.files[0].name);
+            form.append('sub1Img', sub1Img.current.files[0]);
         }
-        if (tripReview_sub2TitleImg.current.files.length > 0) {
-            console.log('tripReview_sub2TitleImg:', tripReview_sub2TitleImg.current.files[0].name);
-            form.append('tripReview_sub2TitleImg', tripReview_sub2TitleImg.current.files[0]);
+        if (sub2TitleImg.current.files.length > 0) {
+            console.log('sub2TitleImg:', sub2TitleImg.current.files[0].name);
+            form.append('sub2TitleImg', sub2TitleImg.current.files[0]);
         }
+       
 
         // Send request
         fetch('http://localhost:8080/tripreview/insert', {
@@ -75,59 +71,71 @@ const ReviewCreateForm = () => {
 
     return (
         <div className='E_ReviewCreateForm'>
-            <div className="form-container">
-                <h2>게시글 등록</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label>제목:</label>
-                        <input type='text' ref={tripReview_title} placeholder='예:(지은이)의 홍콩 여행기'/>
-                    </div>
-                    <div className="form-group">
-                        <label>대표사진:</label>
-                        <input type='file' ref={tripReview_titleImg} />
-                    </div>
-                    <div className="form-group">
-                        <label>내용 제목:</label>
-                        <input type='text' ref={tripReview_topic} />
-                    </div>
-                    <div className="form-group">
-                        <label>내용:</label>
-                        <textarea rows='5' cols='60' ref={tripReview_content} />
-                    </div>
-                    <h3>주요 볼거리</h3>
-                    <div className="subImageGroup">
-                        <div className="subshowlist">
-                            <div className="form-group">
-                                <label>서브사진1:</label>
-                                <input type='file' ref={tripReview_sub1Img} />
-                            </div>
-                            <div className="form-group">
-                                <label>제목:</label>
-                                <input type='text' ref={tripReview_sub1Topic} />
-                            </div>
-                            <div className="form-group">
-                                <label>내용:</label>
-                                <textarea rows='5' cols='60' ref={tripReview_sub1Content} />
-                            </div>
+        <div className="form-container">
+            <h2>게시글 등록</h2>
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label>제목:</label>
+                    <input type='text' ref={title} />
+                </div>
+
+           
+
+              
+
+                <div className="form-group">
+                    <label>대표사진:</label>
+                    <input type='file' ref={titleImg} />
+                </div>
+
+                <div className="form-group">
+                    <label>내용 제목:</label>
+                    <input type='text' ref={topic} />
+                </div>
+
+                <div className="form-group">
+                    <label>내용:</label>
+                    <textarea rows='5' cols='60' ref={content} />
+                </div>
+
+                <h3>주요 볼거리</h3>
+                <div className="subImageGroup">
+                    <div className="subshowlist">
+                        <div className="form-group">
+                            <label>서브사진1:</label>
+                            <input type='file' ref={sub1Img} />
                         </div>
-                        <div className="subshowlist2">
-                            <div className="form-group">
-                                <label>서브사진2:</label>
-                                <input type='file' ref={tripReview_sub2TitleImg} />
-                            </div>
-                            <div className="form-group">
-                                <label>제목:</label>
-                                <input type='text' ref={tripReview_sub2Topic} />
-                            </div>
-                            <div className="form-group">
-                                <label>내용:</label>
-                                <textarea rows='5' cols='60' ref={tripReview_sub2Content} />
-                            </div>
+                        <div className="form-group">
+                            <label>제목:</label>
+                            <input type='text' ref={sub1Topic} />
+                        </div>
+                        <div className="form-group">
+                            <label>내용:</label>
+                            <textarea rows='5' cols='60' ref={sub1Content} />
                         </div>
                     </div>
-                    <button type="submit" className="submit-button">확인</button>
-                </form>
-            </div>
+
+                    <div className="subshowlist2">
+                        <div className="form-group">
+                            <label>서브사진2:</label>
+                            <input type='file' ref={sub2TitleImg} />
+                        </div>
+                        <div className="form-group">
+                            <label>제목:</label>
+                            <input type='text' ref={sub2Topic} />
+                        </div>
+                        <div className="form-group">
+                            <label>내용:</label>
+                            <textarea rows='5' cols='60' ref={sub2Content} />
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <button type="submit" className='button'>등록</button>
+            </form>
+        </div>
         </div>
     );
 };

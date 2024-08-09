@@ -38,16 +38,22 @@ const Section = () => {
             .catch(error => console.error('데이터 가져오기 실패:', error));
     }, []);
 
+
+
+
+
+
+    
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
 
-    const clickOneList = () => nav("/tripRead");
-    const clickTwoList = () => nav("/foodRead");
-    const clickThreeList = () => nav("/userReview");
-    const clickFourList = () => nav("/tripReadCreateForm");
-    const clickFiveList = () => nav("/foodReadCreateForm");
-    const clickSixList = () => nav("/reviewCreateForm");
+    const clickOneList = () => nav("/admin/tripRead");
+    const clickTwoList = () => nav("/admin/foodRead");
+    const clickThreeList = () => nav("/member/userReview");
+    const clickFourList = () => nav("/admin/tripReadCreateForm");
+    const clickFiveList = () => nav("/admin/foodReadCreateForm");
+    const clickSixList = () => nav("/member/reviewCreateForm");
 
     return (
         <div className='E_section'>
